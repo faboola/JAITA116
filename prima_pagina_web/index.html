@@ -1,41 +1,93 @@
 <!DOCTYPE html>
 <html lang="it">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La mia prima pagina web</title>
+    <meta name="description" content="La prima pagina web del corso JAITA116" />
 
-    <meta name="description" content="La prima pagina web del corso JAITA116">
+    <link rel="stylesheet" href="style.css">
 
-</head>
+  </head>
 
-<body>
+  <body>
+    <header>
+      Il tag HEADER indica l'intestazione della pagina, dell'articolo o del
+      sito.
 
-<!-- Titolo di primo livello -->
-<h1>La mia prima pagina web</h1>
-<!-- 
-il Paragrafo è un elmemento BLOCK (va a capo)
-il tag STRONG invece è un elemento INLINE
--->
-<p>Questo è un <strong>paragrafo.</strong> Il tag P delimita dei <strong>blocchi di testo</strong> che verranno visualizzati come paragrafi.</p>
+      <nav>
+        <ul>
+          <!-- UL: unordered list. Elenco puntato -->
+          <!-- dentro gli elementi UL o OL inseriamo i LIST ITEM (LI) -->
+          <li>Voce elenco 1</li>
+          <li>Voce elenco 2</li>
+          <li>Voce elenco 3</li>
+        </ul>
+      </nav>
+    </header>
 
-<p>Questo è un secondo paragrafo. Visto che sta in un tag P separato dal primo, il browser lo visualizza con un <em>piccolo spazio in alto</em> (salta una riga!).</p>
+    <!-- Titolo di primo livello -->
+    <h1>La mia prima pagina web</h1>
+    <!-- il Paragrafo è un elmemento BLOCK (va a capo) il tag STRONG invece è un
+        elemento INLINE -->
+    <p>
+      Questo è un
+      <strong>paragrafo.</strong>
+      Il tag P delimita dei
+      <strong>blocchi di testo</strong>
+      che verranno visualizzati come paragrafi.
+    </p>
 
-<h2>Titolo di secondo livello</h2>
+    <p>
+      Questo è un secondo paragrafo. Visto che sta in un tag P separato dal
+      primo, il browser lo visualizza con un
+      <em>piccolo spazio in alto</em>
+      (salta una riga!).
+    </p>
 
-<p>Questo è un paragrafo. Elemento blocco. Questo è un link: <a href="https://www.google.it" target="_blank">vai su Google.</a></p>
+    <h2>Titolo di secondo livello</h2>
 
+    <p>
+      Questo è un paragrafo. Elemento blocco. Questo è un link:
+      <a href="https://www.google.it" target="_blank">vai su Google.</a>
+    </p>
 
-<!-- NOTA: nei link l'attributo href definisce la DESTINAZIONE, mentre il contenuto individua l'elemento cliccabile -->
+    <!-- NOTA: nei link l'attributo href definisce la DESTINAZIONE, mentre il
+        contenuto individua l'elemento cliccabile -->
 
-<!-- L'attributo target defisce DOVE aprire il link. Se non valorizzato lo apre nella stessa tab/finestra, se _blank lo apre in una nuova finestra o tab. -->
+    <!-- L'attributo target defisce DOVE aprire il link. Se non valorizzato lo apre
+        nella stessa tab/finestra, se _blank lo apre in una nuova finestra o tab. -->
 
-<img src="trieste.jpg" alt="molo a Trieste">
+    <img src="" alt="" />
 
-<!-- NOTA: il tag immagine non ha chiusura! -->
+    <img src="trieste.jpg" alt="molo a Trieste" />
 
-    
-</body>
+    <!-- NOTA: il tag immagine non ha chiusura! -->
+
+    <div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nam,
+        voluptatibus tenetur vel beatae nemo nesciunt ipsa a eos excepturi
+        consequatur repellendus, perferendis explicabo, veniam optio dolores
+        praesentium? Repellat magni blanditiis iure eius inventore in quisquam
+        doloribus odit! Distinctio, eum!
+      </p>
+
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi eius
+        consequatur praesentium repellat odio, sint magni eveniet eaque ea
+        beatae dignissimos voluptatibus odit earum deleniti culpa? Veniam quasi
+        cum ut.
+      </p>
+    </div>
+
+    <ol>
+      <!-- OL: lista ordinata, cioè con i numeri -->
+
+      <li>Primo elemento della lista</li>
+      <li>Secondo elemento della lista</li>
+    </ol>
+
+    <footer>Informazioni generali sulla pagina</footer>
+  </body>
 </html>
