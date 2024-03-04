@@ -11,10 +11,9 @@
   </head>
 
   <body>
-    <header>
+    <header class="main-header intro">
       Il tag HEADER indica l'intestazione della pagina, dell'articolo o del
       sito.
-
       <nav>
         <ul>
           <!-- UL: unordered list. Elenco puntato -->
@@ -30,7 +29,7 @@
     <h1>La mia prima pagina web</h1>
     <!-- il Paragrafo è un elmemento BLOCK (va a capo) il tag STRONG invece è un
         elemento INLINE -->
-    <p>
+    <p class="intro">
       Questo è un
       <strong>paragrafo.</strong>
       Il tag P delimita dei
@@ -45,7 +44,7 @@
       (salta una riga!).
     </p>
 
-    <h2>Titolo di secondo livello</h2>
+    <h2 class="intro">Titolo di secondo livello</h2>
 
     <p>
       Questo è un paragrafo. Elemento blocco. Questo è un link:
@@ -67,16 +66,16 @@
     <div>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum nam,
-        voluptatibus tenetur vel beatae nemo nesciunt ipsa a eos excepturi
+        voluptatibus tenetur vel beatae nemo <span class="intro">nesciunt</span> ipsa a eos excepturi
         consequatur repellendus, perferendis explicabo, veniam optio dolores
         praesentium? Repellat magni blanditiis iure eius inventore in quisquam
-        doloribus odit! Distinctio, eum!
+        doloribus odit! Distinctio, eum!<strong class="intro">Ciao!</strong>
       </p>
 
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nisi eius
         consequatur praesentium repellat odio, sint magni eveniet eaque ea
-        beatae dignissimos voluptatibus odit earum deleniti culpa? Veniam quasi
+        beatae dignissimos <span class="email">voluptatibus</span> odit earum deleniti culpa? Veniam quasi
         cum ut.
       </p>
     </div>
@@ -88,6 +87,8 @@
       <li>Secondo elemento della lista</li>
     </ol>
 
-    <footer>Informazioni generali sulla pagina</footer>
+    <footer class="main-footer">Informazioni generali sulla pagina
+      <div class="footer-info">Indirizzo, telefono, <span class="email">email</span></div>
+    </footer>
   </body>
 </html>

@@ -32,3 +32,26 @@ h2 {
 p {
     color:#2266FF;
 }
+
+.intro { /* si riferisce agli elementi con class="intro"*/
+color:#7ff609;
+background-color: #000;
+}
+
+.main-header {
+    text-align: center;
+    margin:40px;
+}
+
+.main-footer {
+    font-weight: bold; /*grassetto*/
+}
+
+.footer-info {
+    color:#FF9900;
+    font-weight: normal; /*NO grassetto, testo normale */
+}
+
+.footer-info .email { /* SOLO gli elementi con classe .email all'interno della classe .footer-info*/
+    color:purple;
+}
