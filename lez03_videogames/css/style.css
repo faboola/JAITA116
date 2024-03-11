@@ -1,0 +1,70 @@
+body {
+   
+    font-family:Arial, Helvetica, sans-serif;
+   
+}
+
+.container {
+
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+    /* Proprietà shorthand "margin" */
+    /* PER impostare tutti e 4 i lati uguali:  */
+    /* margin:10rem; */
+
+    /*Impostando due valori, il primo è sopra/sotto e il secondo sinistra/destra */
+    /*margin: 0 auto*/
+
+    /*Impostando 3 valori corrisponde a TOP - RIGHT+LEFT - BOTTOM :*/
+    /* margin: 2rem 1rem 4rem */
+
+    /*Impostando 4 valori definisco TOP - RIGHT - BOTTOM - LEFT */
+
+    /*lo stesso principio si applica alla proprietà PADDING. */
+
+    /*la misura in percentuale definisce la dimensione dell'elemento in base alla 
+    dimensione del suo genitore*/
+
+}
+
+h1 {
+    
+    /* il REM (relative EM) ha come base la misura di default del font sul browser */ 
+    font-size: 4rem;
+
+    /*4rem = misura base font * 4*/
+    
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+/*rendiamo fluide le immagini per farle adattare al contenitore */
+
+img {
+    /*l'immagine non può allargarsi oltre la dimensione del suo genitore */
+    /*al massimo sarà grande come il 100% del suo genitore */
+    max-width: 100%;
+}
+
+.index a {
+    /*tutti i tag <a> all'interno dell'elemento con classe .index */
+    font-weight: bold;
+    color:#179617;
+}
+
+.index ul {
+    /*tutti i tag UL all'interno dell'elemento con classe .index */
+
+    list-style-type: none; /*tolgo i pallini alla lista */
+    padding:0; /*annullo il margine interno */
+
+}
+
+
