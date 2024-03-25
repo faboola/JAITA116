@@ -1,0 +1,73 @@
+/*cambio il box-model */ 
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin:auto;
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                HEADER E MENU                               */
+/* -------------------------------------------------------------------------- */
+
+.main-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.main-nav ul {
+    display: flex;
+    list-style-type: none; /*via i pallini dalla lista */
+    padding: 0;
+    column-gap: 1.5rem;  /*spazio interno tra gli elementi*/
+}
+
+.logo img {
+    /*l'immagine dentro il div .logo */
+    width:90px;
+    height: auto;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  PRODOTTI                                  */
+/* -------------------------------------------------------------------------- */
+
+
+.prod-wrapper {
+    display: flex;
+    column-gap: 1rem;
+}
+
+.prod-item {
+    
+    width: 33.333%;
+
+    /* padding:1rem; */
+}
+
+.prod-image img, .gallery-item img { /*accorpo due selettori */
+
+    max-width: 100%; /*rende fluide le immagini*/
+    height: auto;
+}
+
+.gallery-wrapper {
+    display: flex;
+    /*per mandare a capo quando si esaurisce lo spazio */
+    flex-wrap: wrap;
+    /* default: no-wrap*/
+}
+
+.gallery-item {
+    width: 25%;
+}
+
+
+
