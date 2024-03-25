@@ -29,10 +29,7 @@ body {
     justify-content: space-evenly;
 
 
-
 }
-
-
 
 
 .parent-2 {
@@ -59,6 +56,13 @@ body {
 
     /*allineamento sulla linea del testo contenuto nel div*/
     /*align-items: baseline;*/
+    
+    
+    /*per mettere uno spazio tra gli elementi */
+    column-gap:1rem;
+
+    /*solo in orizzontale: column-gap*/
+    /*solo in verticale: row-gap*/
 }
 
 .parent-3 {
@@ -71,6 +75,10 @@ body {
     /*centrato tutto sui due assi */
     justify-content: center;
     align-items: center;
+
+
+ 
+
 }
 
 .parent-4 {
@@ -84,7 +92,14 @@ body {
 
     /*INVERTO GLI ASSI MAIN E CROSS */
     /*proprietà di default: flex-direction: row; */
+    
     flex-direction: column;
+   /*per invertire l'ordine di tutti gli elementi */
+
+   /*
+   flex-direction: column-reverse;
+   flex-direction: row-reverse;
+   */
 
 
 
@@ -94,5 +109,24 @@ body {
 .box {
     border: 1px solid #222;
     background-color: rgb(52, 136, 161);  
+
+    /* per fare i cerchi con il numero centrato*/
+    width: 3rem;
+    height: 3rem;
+    border-radius:50%;
+
+    /*per centrare i numeri all'interno uso nuovamente flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
+}
+
+#spostami {
+
+    background: #ff05ea;
+    order: 0; /*ordinamento di default, come appare nel DOM */
+
+    order:1; /*sposta dopo tutti quelli con order:0;*/
+
 }
