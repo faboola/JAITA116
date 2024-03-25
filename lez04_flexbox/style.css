@@ -1,0 +1,98 @@
+body {
+    font-size: 2rem;
+}
+
+.parent {
+    background-color: rgb(216, 178, 25);
+    /*NOTA: la proprietà DISPLAY cambia la tipologia di elemento, da blocco a inline etc. */
+    display: flex;
+
+    /*Proprietà per disporre sul main axis*/
+
+    /*proprietà di default*/
+    justify-content: flex-start;
+    
+    /*centrato sul main axis */
+    justify-content: center;
+
+    /*in fondo al main axis */
+    justify-content: flex-end;
+
+    /*distribuiti sul main axis*/
+    /*primo elemento all'inizio, ultimo in fondo, gli altri distribuiti al centro */
+    justify-content: space-between;
+
+    /*spazio uguale prima e dopo ai bordi */
+    justify-content: space-around;
+
+    /*esattamente lo stesso spazio tra tutti gli elementi */
+    justify-content: space-evenly;
+
+
+
+}
+
+
+
+
+.parent-2 {
+
+    margin-top: 3rem;
+    background: #b553cb;
+    height: 40vh; /*30% dell'altezza del viewport */
+
+    display: flex;
+
+    /*proprietà sul cross-axis*/
+
+    /*proprietà di default*/
+    align-items: stretch;
+
+    /*allineare all'inizio del cross axis */
+    align-items: flex-start;
+
+    /*allineare alla fine del cross axis*/
+    align-items: flex-end;
+
+    /*allineamento al centro */
+    align-items: center;
+
+    /*allineamento sulla linea del testo contenuto nel div*/
+    /*align-items: baseline;*/
+}
+
+.parent-3 {
+    margin-top: 3rem;
+    background-color: rgb(37, 109, 27);
+    height: 40vh;
+
+    display: flex;
+
+    /*centrato tutto sui due assi */
+    justify-content: center;
+    align-items: center;
+}
+
+.parent-4 {
+    margin-top: 3rem;
+    background-color: #292991;
+    height: 40vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*INVERTO GLI ASSI MAIN E CROSS */
+    /*proprietà di default: flex-direction: row; */
+    flex-direction: column;
+
+
+
+}
+
+
+.box {
+    border: 1px solid #222;
+    background-color: rgb(52, 136, 161);  
+    
+}
