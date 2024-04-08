@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Fira Sans',sans-serif;
 }
@@ -16,6 +20,14 @@ img {
     display: flex;
     justify-content: space-between;
 
+    position:fixed;
+    /*per il position:fixed devo dichiarare una larghezza e delle coordinate*/
+    top: 0;
+    left: 0;
+    /*in caso di position:fixed le coordinate fanno riferimento al viewport */
+    width: 100%;
+
+
 }
 
 .logo img {
@@ -27,4 +39,58 @@ img {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+
+    /*per centrare il div dentro #hero */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
 }
+
+/* OFFERTE */
+#offerte {
+    margin-top: 3rem;
+}
+
+
+.offerta-wrapper {
+    margin-bottom: 1rem;
+}
+
+/* GALLERY */
+.gallery-wrapper {
+    display: flex;
+    flex-wrap: wrap; /*se finisci lo spazio, manda a capo */
+
+
+    /*
+    SOLUZIONE 1: per riallineare il contenitore forziamo un margine negativo che compensa il padding*/
+    /* margin-left: -0.5rem;
+    margin-right: -0.5rem; */
+
+    /*SOLUZIONE 2: Usiamo GAP*/
+    gap:0.5rem;
+
+
+}
+
+.gallery-image {
+    width: 50%;
+    /*padding:0.5rem;*/
+    /*vedi gallery-wrapper */
+
+     /* Formula: (100/colonne - gap) + (gap / colonne) */
+    width: calc((50% - 0.5rem ) + (0.5rem / 2));
+}
+
+.gallery-image img { 
+    /*per evitare che si formino spazi bianchi sotto l'immagine forzo display:block */
+    display: block;
+}
+
+/*CALC*/
+/* 
+.offerta-image {
+    width: calc(50% - 5rem);
+} */
