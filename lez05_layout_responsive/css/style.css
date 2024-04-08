@@ -87,10 +87,101 @@ img {
 .gallery-image img { 
     /*per evitare che si formino spazi bianchi sotto l'immagine forzo display:block */
     display: block;
+    width: 100%;
 }
 
-/*CALC*/
-/* 
-.offerta-image {
-    width: calc(50% - 5rem);
-} */
+.city {
+    display: none;
+    /*diverso da visibility:hidden perché display:none fa proprio sparire l'elemento */
+    /* visibility: hidden; */
+}
+
+
+
+/*footer */
+
+footer#main-footer {
+    background: #AAA;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    margin-top: 3rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                          REGOLE PER SCHERMI GRANDI                         */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width:992px) {
+
+    /*menu */
+
+    nav.main-menu ul {
+        display: flex;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        column-gap: 1.25rem;
+    }
+
+    /*hero*/
+
+    #hero {
+        background-image: url('../images/hero_horiz.jpg');
+        /*le altre proprietà del background sono ereditate */
+    }
+
+    /*offerte*/
+
+    .offerta-wrapper {
+        display: flex;
+        align-items:center;
+        gap: 1rem; 
+        /*il GAP non disturba le dimensioni dei figli perché non c'è flex-wrap:wrap */
+    }
+
+    .offerta-image {
+        width: 33.33%;
+    }
+
+    .offerta-text {
+        width:66.66%;
+    }
+
+    /*gallery*/
+
+    .gallery-wrapper {
+        gap:1rem;
+    }
+
+    .gallery-image {
+         /* 
+        Formula: (100/colonne - gap) + (gap / colonne)
+        */
+    
+        width:calc((25% - 1rem) + ( 1rem / 4 ));
+
+        /*per far funzionare position:absolute devo dare position:relative al genitore */
+
+        position: relative;
+    }
+
+
+    .city {
+        display: block; /*ripristino la proprietà di default del div.city, cioè display:block */
+        position: absolute;
+
+        /*NOTA: la proprietà position di default è position:static */
+        bottom: 0;
+        left: 0;
+
+        background:#ffffff66;
+        width: 100%;
+        padding:0.25rem;
+        text-align: center;
+    }
+
+   
+
+}
