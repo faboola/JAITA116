@@ -1,0 +1,38 @@
+body {
+    background:red;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+    text-shadow:3px 3px #222;
+}
+
+/*vari tipi di "media" per le media query*/
+/*all | print | screen | speech */
+
+
+@media screen and (min-width:640px) {
+
+/*scrivo le regole per questa media query*/
+
+body {
+    background: blue;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+}
+
+@media screen and (min-width:1100px) {
+    body {
+        background:fuchsia;
+    }
+
+    h1 {
+        text-shadow: none;
+    }
+}

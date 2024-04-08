@@ -1,0 +1,30 @@
+body {
+    font-family: 'Fira Sans',sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+img {
+    max-width: 100%; /*rende fluide le immagini*/
+    height: auto;
+}
+
+#main-header {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.logo img {
+    width:100px;
+}
+
+#hero {
+    background-image: url('../images/hero_vertical.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
