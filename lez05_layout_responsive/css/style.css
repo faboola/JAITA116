@@ -1,10 +1,48 @@
+/* -------------------------------------------------------------------------- */
+/*                                VARIABILI CSS                               */
+/* -------------------------------------------------------------------------- */
+
+:root {
+    --primary-color: #ff661a;
+}
+
 * {
     box-sizing: border-box;
 }
 
+
+
 body {
     font-family: 'Fira Sans',sans-serif;
 }
+
+a {
+    color: var(--primary-color);
+   
+}
+
+button#menu-icon {
+    
+    background: transparent;
+
+   color:white;
+   border:1px solid white;
+    border-radius:6px;
+    width:32px;
+    height: 32px;
+    border-radius:50%;
+    text-align: center;
+    line-height: 32px;
+   
+
+}
+
+.is-scrolled button#menu-icon {
+    border:1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+
 
 .container {
     width: 90%;
@@ -17,8 +55,7 @@ img {
 }
 
 #main-header {
-    display: flex;
-    justify-content: space-between;
+   
 
     position:fixed;
     /*per il position:fixed devo dichiarare una larghezza e delle coordinate*/
@@ -26,12 +63,34 @@ img {
     left: 0;
     /*in caso di position:fixed le coordinate fanno riferimento al viewport */
     width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 
+    transition:background-color 0.25s ease-in-out;
+    /*in alternativa possiamo usare "all" per intercettare tutti i mutamenti */
+    z-index:1;
+   
 
 }
 
-.logo img {
-    width:100px;
+
+#main-header.is-scrolled {
+    background-color: white;
+}
+#main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo svg {
+    height: 50px;
+
+    fill:white;
+}
+
+.is-scrolled .logo svg {
+    fill: #ff661a;
 }
 
 .main-menu {
@@ -44,6 +103,8 @@ img {
     padding: 0;
 }
 
+
+
 /* -------------------------------------------------------------------------- */
 /*                           REGOLE PER MENU APERTO                           */
 /* -------------------------------------------------------------------------- */
@@ -51,18 +112,43 @@ img {
 #main-header.is-mobile-open .main-menu {
     display: block;
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     background: rgba(255,255,255,0.9);
     /*il quarto valore è l'alpha channel, cioè il livello di trasparenza*/
 
     width: 100%;
-    height: calc(100% - 55px);
+
+    height: 100%;
+
+    /* height: calc(100% - 55px); */
     /*sottraggo l'altezza della barra menu all'altezza del menu aperto */
 
     display: flex;
     align-items: center;
     justify-content: center;
+
+}
+
+.logo, #menu-icon {
+    z-index:1;
+}
+
+/* #main-header.is-mobile-open .main-menu ul li {
+
+    padding:1rem;
+    text-align: center;
+
+} */
+
+/*alternativa con flexbox invertendo gli assi */
+#main-header.is-mobile-open .main-menu ul {
+
+    display: flex;
+    gap:1.5rem;
+    /*inverto assi flexbox*/
+    flex-direction: column;
+    align-items: center;
 
 }
 
@@ -160,6 +246,15 @@ footer#main-footer {
         /* margin: 0;
         padding: 0; */
         column-gap: 1.25rem;
+    }
+
+    .main-menu a {
+        color:white;
+        text-decoration: none;
+    }
+
+    .is-scrolled .main-menu a {
+        color:var(--primary-color);
     }
 
     #menu-icon {
