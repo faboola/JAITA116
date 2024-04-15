@@ -1,0 +1,21 @@
+/* -------------------------------------------------------------------------- */
+/*                   MEDIA QUERIES DI DEFAULT PER BOOTSTRAP                   */
+/* -------------------------------------------------------------------------- */
+
+/*da 0 a 576 */
+
+
+/*da 576 in su */
+@media screen and (min-width: 576px) {  }
+
+/* da 768 in su (tablets etc) */
+@media screen and (min-width: 768px) {  }
+
+/*schermi da 992px */
+@media screen and (min-width: 992px) {  }
+
+/*schermi da 1200px */
+@media screen and (min-width: 1200px) {  }
+
+/*schermi da 1400px */
+@media screen and (min-width: 1400px) {  }
