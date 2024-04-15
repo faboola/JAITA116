@@ -25,14 +25,15 @@ button#menu-icon {
     
     background: transparent;
 
-   color:white;
-   border:1px solid white;
-    border-radius:6px;
+    color:white;
+    border:1px solid white;
+    
     width:32px;
     height: 32px;
     border-radius:50%;
     text-align: center;
     line-height: 32px;
+
    
 
 }
