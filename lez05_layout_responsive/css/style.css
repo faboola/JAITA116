@@ -34,6 +34,38 @@ img {
     width:100px;
 }
 
+.main-menu {
+    display: none;
+}
+
+.main-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                           REGOLE PER MENU APERTO                           */
+/* -------------------------------------------------------------------------- */
+
+#main-header.is-mobile-open .main-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,0.9);
+    /*il quarto valore è l'alpha channel, cioè il livello di trasparenza*/
+
+    width: 100%;
+    height: calc(100% - 55px);
+    /*sottraggo l'altezza della barra menu all'altezza del menu aperto */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
 #hero {
     background-image: url('../images/hero_vertical.jpg');
     height: 100vh;
@@ -117,12 +149,21 @@ footer#main-footer {
 
     /*menu */
 
+    .main-menu {
+        display: block;
+    }
+
     nav.main-menu ul {
         display: flex;
         list-style-type: none;
-        margin: 0;
-        padding: 0;
+        /*questo l'ho già specificato prima nel CSS */
+        /* margin: 0;
+        padding: 0; */
         column-gap: 1.25rem;
+    }
+
+    #menu-icon {
+        display: none;
     }
 
     /*hero*/
