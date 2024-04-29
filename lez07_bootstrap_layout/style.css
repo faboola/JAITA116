@@ -1,0 +1,15 @@
+#hero:after {
+
+    content: '';
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*absolute ha bisogno di coordinate!*/
+    width: 100%;
+    height: 100%;
+   
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,0.5620842086834734) 0%, rgba(255,255,255,0) 100%);
+}
