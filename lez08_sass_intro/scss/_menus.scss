@@ -1,0 +1,18 @@
+
+#main-header {
+    background: $white;
+
+    .main-menu {
+        border:1px solid $primary;
+
+        ul {
+            list-style-type: none;
+
+            @media screen and (min-width:992px) {
+                display: flex;
+                gap:1rem;
+            }
+           
+        }
+    }
+}

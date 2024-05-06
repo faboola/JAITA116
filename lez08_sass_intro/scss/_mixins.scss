@@ -1,0 +1,58 @@
+@mixin myBox() {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border:1px solid black;
+    background:red;
+}
+
+@mixin myGradient($from: #000, $to : #fff, $direction:0deg) {
+    background: $from;
+    background: linear-gradient($direction, $from 0%, $to 100%);
+}
+
+@mixin myButton($bgColor, $textColor, $outline:false) {
+    background-color: $bgColor;
+    color: $textColor;
+    padding: calc($base-size / 2) calc($base-size * 1.5); //equivale a 0.5rem 1.5rem
+    border-radius: 10px;
+    text-decoration: none;
+
+    &:hover {
+        background-color: darken($bgColor,10%);
+        //al passaggio del mouse scurisci lo sfondo 
+    }
+
+    @if $outline==true {
+
+        background-color: transparent;
+        border: 1px solid $bgColor;
+
+        &:hover {
+            background-color: transparentize($bgColor,0.5);
+            color:$textColor;
+        }
+
+    }
+
+
+}
+
+//MIXIN PER MEDIA QUERIES
+
+@mixin tablet {
+    @media screen and (min-width:768px) {
+        @content;
+    }
+}
+//la direttiva @content crea una specie di "slot" per inserire altro codice quando richiamo il mixin
+
+@mixin extralarge {
+    @media screen and (min-width:1280px) {
+        @content;
+    }
+}
+
+
+
+
