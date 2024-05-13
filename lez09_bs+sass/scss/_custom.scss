@@ -1,0 +1,36 @@
+//ESEMPIO DI GRIGLIA CON MIXIN
+
+.page-blog {
+    //creare row
+    @include make-row();
+}
+
+
+.entry-content {
+    //prima preparo la colonna
+    //NOTA: se la colonna è da 12 non serve make-col();
+
+    @include make-col-ready();
+
+    @include media-breakpoint-up(lg) { //equivale a una media query con min-width:992px 
+
+        //fornisco una dimensione
+        @include make-col(8);
+    }
+}
+
+.sidebar {
+
+    @include make-col-ready();
+
+    @include media-breakpoint-up(lg) { 
+        @include make-col(4);
+    }
+
+}
+
+
+
+
+
+
